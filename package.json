@@ -1,0 +1,19 @@
+{
+  "name": "Web-Engineering",
+  "version": "0.0.1",
+  "description": "Web-Engineering Project",
+  "license": "UNLICENSED",
+  "author": {
+    "name": "DHBW Stuttgart",
+    "url": "http://www.dhbw-stuttgart.de/"
+  },
+  "private": true,
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "cookie-parser": "^1.4.3",
+    "express": "^4.15.2"
+  },
+  "devDependencies": {
+  },
+  "scripts": {}
+}
