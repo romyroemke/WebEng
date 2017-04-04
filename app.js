@@ -4,14 +4,11 @@ var util = require('util');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var path = require('path');
+var db = require('./db').db;
 
 var app = express();
 
 var httpPort = 3000;
-
-if (httpPort == 5) {
-  // TODO
-}
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -56,7 +53,7 @@ app.get('/', function (req, res) {
   res.send(result);
 });
 
-// Any request which is not mapped to a specific service will be looked up against the AngularJS page
+// Any request which is not mapped to a specific service will be looked up in the frontend folder
 app.use(express.static(path.join(__dirname, 'frontend')));
 
 // Default fallback rule which is just printing a log information
