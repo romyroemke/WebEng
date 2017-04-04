@@ -37,6 +37,7 @@ app.use(function (req, res, next) {
 // Services defined in specific routes files
 app.use('/services/list', require('./services/list'));
 app.use('/services/add', require('./services/add'));
+app.use('/services/delete', require('./services/delete'));
 
 // Cookie Handling
 app.get('/set-cookie', function (req, res) {
