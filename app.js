@@ -38,6 +38,9 @@ app.use(function (req, res, next) {
 app.use('/services/list', require('./services/list'));
 app.use('/services/add', require('./services/add'));
 app.use('/services/delete', require('./services/delete'));
+app.use('/services/listcats', require('./services/listcats'));
+app.use('/services/addcats', require('./services/addcats'));
+app.use('/services/deletecats', require('./services/deletecats'));
 
 // Cookie Handling
 app.get('/set-cookie', function (req, res) {

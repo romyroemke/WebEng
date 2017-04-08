@@ -6,6 +6,7 @@ var path = require('path');
 var db = new tingodb.Db(path.join(__dirname, '/db'), {});
 
 var events = db.collection('Events');
+var categories = db.collection('Categories');
 
 events.insert({
   title: 'Christmas Feast',
@@ -15,6 +16,11 @@ events.insert({
 events.insert({
   title: 'New Years Eve',
   location: null,
+});
+
+categories.insert({
+    category: 'Holiday',
+    color: 'blue',
 });
 
 exports.db = db;
